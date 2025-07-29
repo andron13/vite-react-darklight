@@ -1,6 +1,6 @@
 import { Mail, Phone } from "lucide-react";
 
-import { Logo } from "@/enteties/logo/logo";
+import { Logo } from "@/entities/logo";
 
 export const Footer = () => (
   <footer className="border-t border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800">

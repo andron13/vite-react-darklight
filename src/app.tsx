@@ -1,9 +1,10 @@
-import { BenefitsSection } from "@/enteties/dummy-sections/benefits-section/benefits-section";
-import { CTASection } from "@/enteties/dummy-sections/cta-section/cta-section";
-import { FeaturesSection } from "@/enteties/dummy-sections/features-section/features-section";
-import { HeroSection } from "@/enteties/dummy-sections/hero-section/hero-section";
-import { Footer } from "@/enteties/footer/footer";
-import { Header } from "@/enteties/header/header";
+import { Footer, Header } from "@/entities";
+import {
+  BenefitsSection,
+  CTASection,
+  FeaturesSection,
+  HeroSection,
+} from "@/entities/dummy-sections";
 
 const MainContent = () => (
   <main className="mx-auto max-w-6xl px-4 py-12">

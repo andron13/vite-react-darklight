@@ -1,6 +1,6 @@
-import { Logo } from "@/enteties/logo/logo";
-import { Navigation } from "@/enteties/navigation/navigation";
-import { ThemeToggle } from "@/enteties/theme-toggle/theme-toggle";
+import { Logo } from "@/entities/logo";
+import { Navigation } from "@/entities/navigation";
+import { ThemeToggle } from "@/features/theme-toggle";
 
 export const Header = () => (
   <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-900/80">
