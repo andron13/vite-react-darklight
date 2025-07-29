@@ -1,15 +1,25 @@
+import { BenefitsSection } from "@/enteties/dummy-sections/benefits-section/benefits-section";
+import { CTASection } from "@/enteties/dummy-sections/cta-section/cta-section";
+import { FeaturesSection } from "@/enteties/dummy-sections/features-section/features-section";
+import { HeroSection } from "@/enteties/dummy-sections/hero-section/hero-section";
+import { Footer } from "@/enteties/footer/footer";
+import { Header } from "@/enteties/header/header";
+
+const MainContent = () => (
+  <main className="mx-auto max-w-6xl px-4 py-12">
+    <HeroSection />
+    <FeaturesSection />
+    <BenefitsSection />
+    <CTASection />
+  </main>
+);
+
 export const App = () => {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white text-black transition-colors dark:bg-gray-900 dark:text-white">
-      <div className="px-4 text-center">
-        <h1 className="mb-4 text-4xl font-bold">
-          Vite React Dark/Light Theme Starter
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Простая заготовка для переключения между светлой и тёмной темой с
-          Tailwind, Vite, React и TypeScript.
-        </p>
-      </div>
-    </main>
+    <div className="min-h-screen bg-white text-black transition-colors dark:bg-gray-900 dark:text-white">
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
   );
 };
