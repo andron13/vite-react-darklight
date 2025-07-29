@@ -1,7 +1,12 @@
 {
   "name": "vite-react-darklight",
   "private": true,
-  "author": "andron13",
+  "description": "Vite React Dark/Light Template",
+  "author": {
+    "name": "andron13",
+    "email": "andron13@gmail.com",
+    "url": "https://github.com/andron13"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/andron13/vite-react-darklight.git"

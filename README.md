@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# ⚡ Vite React Dark/Light Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простой и масштабируемый стартовый шаблон на базе **React + TypeScript + Vite + TailwindCSS** с поддержкой **Dark/Light темы**, реализованной через `Context API` и архитектуру **FSD (Feature-Sliced Design)**.
 
-Currently, two official plugins are available:
+🔗 [Деплой на Vercel](https://vite-react-darklight.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Стек
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS 4**
+- **Lucide Icons**
+- **Feature-Sliced Design**
+- **Dark/Light Theme Toggle**
+- **Context API + localStorage**
+- **ESLint + TypeScript-aware rules**
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🗂️ Архитектура (FSD)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+Пример структуры:
+
+```
+src/
+├── app/ # точка входа, провайдеры
+├── shared/
+│ ├── lib/ # context, хелперы
+├── features/ # feature-компоненты с логикой
+├── entities/ # UI-сущности (header, footer и т.д.)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.mjs
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+## 🌗 Переключатель темы
 
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+> На основе Context API + localStorage. При инициализации учитывает `prefers-color-scheme`.
+
+```tsx
+import { ThemeProvider } from "@/shared/lib/theme";
+
+const App = () => (
+  <ThemeProvider>
+    <YourApp />
+  </ThemeProvider>
+);
 ```
+
+⸻
+
+### 🧩 ESLint + TS + React
+
+### ‍💻 Автор
+
+@andron13
+
+Разработано с ❤️ для фронтендеров, которые ценят чистую архитектуру и UX.
