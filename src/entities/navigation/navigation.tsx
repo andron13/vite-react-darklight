@@ -1,28 +1,23 @@
+import { twMerge } from "tailwind-merge";
+
+const NAVIGATION_ITEMS = [
+  { href: "#", label: "Главная" },
+  { href: "#", label: "О проекте" },
+  { href: "#", label: "Услуги" },
+  { href: "#", label: "Контакты" },
+];
+
+const LINK_STYLES = twMerge(
+  "transition-colors",
+  "text-gray-600 hover:text-gray-900",
+  "dark:text-gray-300 dark:hover:text-white",
+);
 export const Navigation = () => (
-  <div className="hidden items-center space-x-8 md:flex">
-    <a
-      className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-      href="#"
-    >
-      Главная
-    </a>
-    <a
-      className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-      href="#"
-    >
-      О проекте
-    </a>
-    <a
-      className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-      href="#"
-    >
-      Услуги
-    </a>
-    <a
-      className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-      href="#"
-    >
-      Контакты
-    </a>
-  </div>
+  <nav className="hidden items-center space-x-8 md:flex">
+    {NAVIGATION_ITEMS.map(({ href, label }) => (
+      <a className={LINK_STYLES} href={href} key={label}>
+        {label}
+      </a>
+    ))}
+  </nav>
 );

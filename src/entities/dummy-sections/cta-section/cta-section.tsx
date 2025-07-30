@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 export const CTASection = () => (
   <section className="text-center">
     <div className="mx-auto max-w-2xl">
@@ -6,7 +8,14 @@ export const CTASection = () => (
         Скачайте заготовку и начните создавать своё приложение уже сегодня. Всё
         необходимое уже настроено и готово к работе.
       </p>
-      <button className="transform rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-12 py-4 text-lg font-medium text-white transition-all hover:scale-105 hover:from-blue-700 hover:to-purple-700">
+      <button
+        className={twMerge(
+          "bg-gradient-to-r from-blue-600 to-purple-600",
+          "text-lg font-medium text-white",
+          "transform rounded-lg px-12 py-4 transition-all",
+          "hover:scale-105 hover:from-blue-700 hover:to-purple-700",
+        )}
+      >
         Скачать сейчас
       </button>
     </div>
