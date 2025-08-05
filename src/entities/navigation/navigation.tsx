@@ -8,9 +8,11 @@ const NAVIGATION_ITEMS = [
 ];
 
 const LINK_STYLES = twMerge(
-  "transition-colors",
-  "text-gray-600 hover:text-gray-900",
-  "dark:text-gray-300 dark:hover:text-white",
+  "transition-colors duration-200",
+  "text-navy-600 hover:text-navy-900",
+  "dark:text-cream-300 dark:hover:text-cream-100",
+  "hover:underline underline-offset-4 decoration-2",
+  "focus:outline-none focus:ring-2 focus:ring-navy-400 dark:focus:ring-cream-400 focus:ring-offset-2 focus:ring-offset-background rounded-sm px-1 py-0.5",
 );
 export const Navigation = () => (
   <nav className="hidden items-center space-x-8 md:flex">

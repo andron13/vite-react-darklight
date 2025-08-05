@@ -8,13 +8,13 @@ export const ThemeToggle = () => {
   return (
     <button
       aria-label="Переключить тему"
-      className="rounded-lg p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+      className="hover:bg-cream-200 dark:hover:bg-navy-700 focus:ring-navy-400 dark:focus:ring-cream-400 rounded-lg p-2 transition-colors duration-200 focus:ring-2 focus:outline-none"
       onClick={toggleTheme}
     >
       {theme === "dark" ? (
-        <Sun className="h-5 w-5" />
+        <Sun className="text-cream-100 h-5 w-5" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="text-navy-700 h-5 w-5" />
       )}
     </button>
   );

@@ -23,9 +23,9 @@ export const App = () => {
     <div
       className={twMerge(
         "min-h-screen",
-        "transition-colors",
-        "bg-white text-black",
-        "dark:bg-gray-900 dark:text-white",
+        "transition-colors duration-300",
+        "bg-cream-50 text-navy-800",
+        "dark:bg-navy-900 dark:text-cream-100",
       )}
     >
       <Header />

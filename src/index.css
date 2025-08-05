@@ -2,9 +2,36 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  /* Расширенная палитра Cream */
+  --color-cream-50: #fefcfa;
+  --color-cream-100: #fcf9f6;
+  --color-cream-200: #f9f3ed;
+  --color-cream-300: #f5ece1;
+  --color-cream-400: #f0e4d3;
+  --color-cream-500: #e8d7c2;
+  --color-cream-600: #dcc7a8;
+  --color-cream-700: #cab189;
+  --color-cream-800: #a89470;
+  --color-cream-900: #8a7759;
+
+  /* Расширенная палитра Navy */
+  --color-navy-50: #f0f3f8;
+  --color-navy-100: #d6e1ed;
+  --color-navy-200: #a8c0d8;
+  --color-navy-300: #7a9fc3;
+  --color-navy-400: #4c6d94;
+  --color-navy-500: #355580;
+  --color-navy-600: #273c57;
+  --color-navy-700: #1f2f43;
+  --color-navy-800: #16212f;
+  --color-navy-900: #0d141c;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Светлая тема - кремовый фон, темно-синий текст */
+  --background: var(--color-cream-50);
+  --foreground: var(--color-navy-800);
 }
 
 @theme inline {
@@ -14,7 +41,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Темная тема - темно-синий фон, светло-кремовый текст */
+    --background: var(--color-navy-900);
+    --foreground: var(--color-cream-100);
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply py-1 text-center text-xl/8 font-bold text-balance break-words;
+  }
+
+  p {
+    @apply first-letter:font-bold;
+    /*@apply indent-6;*/
   }
 }
