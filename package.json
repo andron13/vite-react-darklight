@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs --fix",
     "format:fix": "prettier --write \"./**/*.{ts,tsx,css,mjs,json,md}\"",
-    "ncu:u": "ncu -u"
+    "ncu:u": "ncu -u",
+    "prepare": "husky"
   },
   "dependencies": {
     "lucide-react": "^0.536.0",
