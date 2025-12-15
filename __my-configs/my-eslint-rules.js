@@ -5,26 +5,7 @@
 // ========================================
 
 const sortingRules = {
-  // Import sorting
-  "import/order": [
-    "error",
-    {
-      "newlines-between": "always-and-inside-groups",
-      groups: [
-        "builtin",
-        "external",
-        "internal",
-        ["parent", "sibling"],
-        "object",
-        "type",
-        "index",
-      ],
-      alphabetize: {
-        order: "asc",
-        caseInsensitive: true,
-      },
-    },
-  ],
+  // --- ПРАВИЛА IMPORT/ORDER УДАЛЕНЫ/ЗАКОММЕНТИРОВАНЫ, ТАК КАК ТРЕБУЮТ ESLINT-PLUGIN-IMPORT ---
 
   // Remove unused imports
   "unused-imports/no-unused-imports": "error",
@@ -35,11 +16,7 @@ const sortingRules = {
     { allowSameFolder: false, rootDir: "src", prefix: "@" },
   ],
 
-  // Imports at the beginning of the file
-  "import/first": "error",
-
-  // Empty line after imports
-  "import/newline-after-import": "error",
+  // --- ПРАВИЛА IMPORT/FIRST И IMPORT/NEWLINE-AFTER-IMPORT УДАЛЕНЫ/ЗАКОММЕНТИРОВАНЫ ---
 };
 
 // ========================================
@@ -47,8 +24,8 @@ const sortingRules = {
 // ========================================
 export const myEslintRules = {
   // Include sorting rules
-  // !!!!       perfectionist.configs["recommended-natural"], or this sortingRules
-  // ...sortingRules,
+  // !!! Мы полагаемся на perfectionist.configs["recommended-natural"] для общей сортировки
+  ...sortingRules,
 
   // ========================================
   // TYPESCRIPT RULES
@@ -160,34 +137,36 @@ export const myEslintRules = {
   // REACT HOOKS RULES
   // ========================================
 
+  // --- ПРАВИЛА REACT-HOOKS УДАЛЕНЫ/ЗАКОММЕНТИРОВАНЫ, ТАК КАК ТРЕБУЮТ ESLINT-PLUGIN-REACT-HOOKS ---
   // Hooks rules
-  "react-hooks/rules-of-hooks": "error",
+  // "react-hooks/rules-of-hooks": "error",
 
   // Warning about dependencies in useEffect
-  "react-hooks/exhaustive-deps": "warn",
+  // "react-hooks/exhaustive-deps": "warn",
 
   // ========================================
   // IMPORT/EXPORT RULES
   // ========================================
 
+  // --- ПРАВИЛА IMPORT/* УДАЛЕНЫ/ЗАКОММЕНТИРОВАНЫ, ТАК КАК ТРЕБУЮТ ESLINT-PLUGIN-IMPORT ---
   // Prohibit circular imports
-  "import/no-cycle": "error",
+  // "import/no-cycle": "error",
 
   // Control file extensions
-  "import/extensions": [
-    "error",
-    "ignorePackages",
-    { js: "never", jsx: "never", ts: "never", tsx: "never" },
-  ],
+  // "import/extensions": [
+  //   "error",
+  //   "ignorePackages",
+  //   { js: "never", jsx: "never", ts: "never", tsx: "never" },
+  // ],
 
   // Don't require default export
-  "import/prefer-default-export": "off",
+  // "import/prefer-default-export": "off",
 
   // Disabled - TypeScript checks itself
   "import/no-unresolved": "off",
 
   // Disabled due to TypeScript resolver issues
-  "import/no-duplicates": "off",
+  // "import/no-duplicates": "off",
 
   // ========================================
   // GENERAL CODE QUALITY RULES
